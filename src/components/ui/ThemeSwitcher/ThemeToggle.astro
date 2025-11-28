@@ -1,0 +1,60 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<label
+  id="theme-toggle"
+  class:list={[
+    "relative flex cursor-pointer items-center justify-center select-none",
+    className,
+  ]}
+  for="theme-toggle-checkbox"
+>
+  <span class="sr-only">Change Theme</span>
+  <input id="theme-toggle-checkbox" type="checkbox" class="peer sr-only" />
+
+  <span
+    class="absolute inset-0 flex scale-100 rotate-0 items-center justify-center opacity-100 transition-all duration-500 ease-in-out peer-checked:scale-0 peer-checked:rotate-90 peer-checked:opacity-0"
+  >
+    <svg
+      class="h-full w-full"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <circle cx="12" cy="12" r="4"></circle>
+      <path
+        d="M3 12h1m8-9v1m8 8h1m-9 8v1m-6.4-15.4l.7.7m12.1-.7l-.7.7m0 11.4l.7.7m-12.1-.7l-.7.7"
+      ></path>
+    </svg>
+  </span>
+
+  <span
+    class="absolute inset-0 flex scale-0 -rotate-90 items-center justify-center opacity-0 transition-all duration-350 ease-in-out peer-checked:scale-100 peer-checked:rotate-0 peer-checked:opacity-100"
+  >
+    <svg
+      class="h-full w-full"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path
+        d="M12 3c.13 0 .26 0 .39 0a7.5 7.5 0 0 0 7.92 12.45a9 9 0 1 1 -8.31 -12.45z"
+      ></path>
+    </svg>
+  </span>
+</label>
+
+<script>
+  import "./ThemeSwitcherController.ts";
+</script>

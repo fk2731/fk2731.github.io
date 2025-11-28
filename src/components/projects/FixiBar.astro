@@ -1,0 +1,57 @@
+---
+import ProjectCard from "@/components/ui/ProjectCard.astro";
+
+const fixiBarTechs = {
+  Python:
+    "bg-yellow-500/10 text-yellow-700 dark:bg-yellow-400/10 dark:text-yellow-200",
+  Shell: "bg-lime-500/10 text-lime-700 dark:bg-lime-400/10 dark:text-lime-200",
+  GTK: "bg-emerald-500/10 text-emerald-700 dark:bg-emerald-400/10 dark:text-emerald-200",
+  Nvim: "bg-green-600/10 text-green-700 dark:bg-green-500/10 dark:text-green-100",
+  Lua: "bg-indigo-500/10 text-indigo-700 dark:bg-indigo-400/10 dark:text-indigo-200",
+};
+---
+
+<ProjectCard
+  title="FixiBar"
+  subtitle="Fully Riced Hyprland"
+  icon="hyprland"
+  iconClass="bg-sky-500/10 text-sky-600"
+  technologies={fixiBarTechs}
+  githubUrl="https://github.com/fk2731/FixiBar"
+>
+  <p>
+    A highly custom config for <strong>Hyprland</strong> compositor. This project
+    bridges the gap between visual aesthetics and low-level system monitoring, among
+    other utilities.
+  </p>
+  <ul class="mt-2 list-none space-y-2 pl-0 text-gray-600 dark:text-gray-300">
+    <li class="flex gap-2">
+      <span class="font-bold text-sky-500">›</span>
+      <span
+        >Implemented <strong>asynchronous polling</strong> mechanisms in Python to
+        prevent I/O blocking.</span
+      >
+    </li>
+    <li class="flex gap-2">
+      <span class="font-bold text-sky-500">›</span>
+      <span
+        >Developed custom software for the <strong>automation</strong> of system
+        tasks.</span
+      >
+    </li>
+    <li class="flex gap-2">
+      <span class="font-bold text-sky-500">›</span>
+      <span
+        >Designed a <strong>modular architecture</strong> to facilitate easy addition
+        of widgets.</span
+      >
+    </li>
+    <li class="flex gap-2">
+      <span class="font-bold text-sky-500">›</span>
+      <span
+        >Leveraged <strong>GTK</strong> for creating custom widgets prioritizing
+        UI/UX.</span
+      >
+    </li>
+  </ul>
+</ProjectCard>

@@ -1,0 +1,91 @@
+---
+import Card from "@/components/ui/Card.astro";
+import Badge from "@/components/ui/Badge.astro";
+
+interface Props {
+  title: string;
+  subtitle: string;
+  icon: string;
+  iconClass?: string;
+  watermarkIcon?: string;
+  technologies?: Record<string, string>;
+  githubUrl?: string;
+}
+
+const {
+  title,
+  subtitle,
+  icon,
+  iconClass = "bg-gray-500/10 text-gray-500",
+  watermarkIcon = "fixiBar",
+  technologies,
+  githubUrl,
+} = Astro.props;
+---
+
+<Card class="flex h-full flex-col">
+  <article class="group relative flex h-full flex-col">
+    <svg
+      class="pointer-events-none absolute top-1/2 left-1/2 z-0 size-[clamp(17.25rem,27vw,22.5rem)] -translate-x-1/2 -translate-y-1/2 opacity-10 transition-transform duration-500 sm:left-2/3"
+      aria-hidden="true"
+    >
+      <use href={`#${watermarkIcon}`}></use>
+    </svg>
+
+    <div class="relative flex h-full flex-col">
+      <header class="flex flex-none items-start justify-between">
+        <div class="flex items-center gap-6">
+          <div
+            class:list={[
+              "shadow-3d-light dark:shadow-3d-dark rounded-2xl p-2",
+              iconClass,
+            ]}
+          >
+            <svg class="size-12 sm:size-13" aria-hidden="true">
+              <use href={`#${icon}`}></use>
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold italic sm:text-3xl">{title}</h2>
+            <span
+              class="text-xs font-semibold tracking-wider text-gray-500 uppercase sm:text-base dark:text-gray-400"
+            >
+              {subtitle}
+            </span>
+          </div>
+        </div>
+
+        {
+          githubUrl && (
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 transition-all duration-300 hover:scale-110 hover:text-black dark:hover:text-white"
+              aria-label="View source code on GitHub"
+            >
+              <svg class="size-8 sm:size-10" aria-hidden="true">
+                <use href={`#github`} />
+              </svg>
+            </a>
+          )
+        }
+      </header>
+
+      <div class="mt-4 mb-6 flex grow flex-col gap-4">
+        <slot />
+      </div>
+
+      <div class="my-1 mt-auto flex flex-none flex-wrap gap-3">
+        {
+          technologies &&
+            Object.entries(technologies).map(([name, classes]) => (
+              <Badge class={classes} icon={name.toLowerCase()}>
+                {name}
+              </Badge>
+            ))
+        }
+      </div>
+    </div>
+  </article>
+</Card>

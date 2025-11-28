@@ -1,0 +1,29 @@
+---
+import "./styles.css";
+
+interface Props {
+  id: string;
+  triggerId?: string; // If not provided, override context menu
+}
+
+const { id, triggerId } = Astro.props;
+---
+
+<div id={id} class="popup" data-trigger-id={triggerId}>
+  <slot />
+</div>
+
+<script>
+  import { ModalPopUpController } from "./ModalPopUpController.ts";
+  const menus = document.querySelectorAll(".popup");
+  menus.forEach((menu) => {
+    try {
+      new ModalPopUpController(menu.id);
+    } catch (e) {
+      console.error(e);
+      if (window) {
+        window.alert(`Error initializing PopUp with id ${menu.id}: ${e}`);
+      }
+    }
+  });
+</script>

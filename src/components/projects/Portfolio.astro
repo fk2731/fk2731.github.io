@@ -1,0 +1,50 @@
+---
+import ProjectCard from "@/components/ui/ProjectCard.astro";
+
+const portfolioTechs = {
+  Astro:
+    "bg-violet-600/10 text-violet-800 dark:bg-violet-500/10 dark:text-violet-100",
+  TypeScript:
+    "bg-blue-600/10 text-blue-800 dark:bg-blue-500/10 dark:text-blue-100",
+  Tailwind:
+    "bg-teal-500/10 text-teal-700 dark:bg-teal-400/10 dark:text-teal-200",
+  CSS: "bg-blue-500/10 text-blue-700 dark:bg-blue-400/10 dark:text-blue-200",
+};
+---
+
+<ProjectCard
+  title="Portfolio Website"
+  subtitle="My Personal Portfolio"
+  icon="logo"
+  iconClass="bg-light dark:bg-light/10 dark:text-light text-dark"
+  technologies={portfolioTechs}
+>
+  <div class="prose dark:prose-invert max-w-none leading-relaxed">
+    <p>
+      Developed a <strong>lightweight</strong> and <strong
+        >high-performance</strong
+      > personal portfolio website from scratch using <strong>Astro</strong>'s
+      island architecture.
+    </p>
+    <ul class="mt-2 list-none space-y-2 pl-0 text-gray-600 dark:text-gray-300">
+      <li class="flex gap-2">
+        <span class="font-bold text-sky-500">›</span>
+        <span>
+          Leveraged <strong>Static Site Generation (SSG)</strong> to deliver pre-rendered
+          HTML, ensuring a minimal footprint and <strong
+            >near-instant load speeds</strong
+          >.
+        </span>
+      </li>
+      <li class="flex gap-2">
+        <span class="font-bold text-sky-500">›</span>
+        <span>
+          Built reusable components with <strong>TypeScript</strong> and <strong
+            >Tailwind</strong
+          >
+          for consistency and maintainability made by myself.
+        </span>
+      </li>
+    </ul>
+  </div>
+</ProjectCard>

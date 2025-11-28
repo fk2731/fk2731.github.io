@@ -1,0 +1,142 @@
+<style>
+  .typewriter-effect {
+    border-right: 3px solid #06b6d4;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    display: inline-block;
+    vertical-align: bottom;
+  }
+
+  .cursor-blink-anim {
+    animation: blink-caret 0.69s step-end infinite;
+  }
+
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #06b6d4;
+    }
+  }
+</style>
+
+<div
+  aria-hidden="true"
+  class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+>
+  <div
+    style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+    class="from-light-brown to-light-brown dark:from-dark-blue dark:to-light relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75 dark:opacity-30"
+  >
+  </div>
+</div>
+
+<div
+  class="flex min-h-[83vh] flex-col justify-center px-5 sm:px-0 sm:pt-0 landscape:pt-9"
+>
+  <section class="mx-auto max-w-3xl space-y-6 text-center">
+    <p
+      id="command-block"
+      class="text-light-blue dark:text-dark-blue flex min-h-9 origin-center items-center justify-center gap-2 font-mono text-2xl font-medium md:text-3xl"
+    >
+      <span class="select-none">~#:</span>
+
+      <span id="typewriter-text" class="typewriter-effect cursor-blink-anim"
+        >/usr/bin/whoami</span
+      >
+    </p>
+
+    <div class="reveal-content origin-center scale-90 space-y-6 opacity-0">
+      <h1 class="text-5xl font-bold tracking-tight text-pretty md:text-7xl">
+        Kristian Leonel
+      </h1>
+
+      <p
+        class="text-xl font-medium text-gray-700 md:text-2xl dark:text-gray-300"
+      >
+        Computer Science student at
+        <span class="group relative cursor-help font-semibold">
+          <abbr
+            aria-label="Universidad Nacional Autónoma de México"
+            class="no-underline decoration-dotted underline-offset-4 transition-colors hover:text-cyan-500"
+          >
+            UNAM
+          </abbr>
+
+          <span
+            class="dark:bg-dark/50 bg-light/50 shadow-3d-light dark:shadow-3d-dark pointer-events-none absolute top-full left-1/2 mt-2 hidden -translate-x-1/2 scale-95 rounded-full px-3 py-1.5 text-base whitespace-nowrap opacity-0 backdrop-blur transition-all duration-200 group-hover:scale-100 group-hover:opacity-100 md:block"
+          >
+            Universidad Nacional Autónoma de México
+          </span>
+        </span>
+      </p>
+
+      <p
+        class="text-light-blue dark:text-dark-blue mx-auto max-w-2xl text-base leading-relaxed text-pretty md:text-xl"
+      >
+        Just a CS student exploring <span class="font-bold"
+          >Operating Systems</span
+        > and
+        <span class="font-bold">Web Development</span>. I'm always looking to
+        leverage new technologies to build optimized, user-centric software
+        solutions — guided by the idea that knowledge becomes more valuable when
+        it’s shared.
+      </p>
+    </div>
+  </section>
+</div>
+
+<div
+  aria-hidden="true"
+  class="absolute inset-x-0 top-7/12 -z-10 transform-gpu overflow-hidden blur-3xl sm:top-3/12"
+>
+  <div
+    style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+    class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-sky-600 to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75"
+  >
+  </div>
+</div>
+
+<script>
+  import { gsap } from "gsap";
+
+  // "/usr/bin/whoami" = 15 char
+  const charCount = 15;
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const tl = gsap.timeline({ delay: 0.3 });
+
+    tl.to("#typewriter-text", {
+      width: charCount + "ch",
+      duration: 1.3,
+      ease: `steps(${charCount})`,
+    })
+      .to("#command-block", {
+        scale: 0.96,
+        duration: 0.3,
+        yoyo: true,
+        repeat: 1,
+        ease: "power1.inOut",
+        onComplete: () => {
+          document.getElementById("typewriter-text").style.borderRightColor =
+            "transparent";
+          document
+            .getElementById("typewriter-text")
+            .classList.remove("cursor-blink-anim");
+        },
+      })
+      .to(
+        ".reveal-content",
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 1,
+          ease: "back.out(1)",
+        },
+        "-=0.1",
+      );
+  });
+</script>

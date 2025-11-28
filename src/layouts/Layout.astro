@@ -1,0 +1,21 @@
+---
+import "@/styles/global.css";
+import sprite from "@/assets/icons/sprite.svg?raw";
+---
+
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>GG</title>
+  </head>
+  <body
+    class="bg-light dark:bg-dark text-line dark:text-light scroll-smooth pt-15 transition-colors duration-300"
+  >
+    <div style="display:none" aria-hidden="true" set:html={sprite} />
+    <slot />
+  </body>
+</html>

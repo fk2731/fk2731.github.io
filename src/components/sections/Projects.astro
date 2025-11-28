@@ -1,0 +1,68 @@
+---
+import FixiBar from "@/components/projects/FixiBar.astro";
+import BorderDetection from "@/components/projects/BorderDetection.astro";
+import LabRemo from "@/components/projects/LabRemo.astro";
+import Portfolio from "@/components/projects/Portfolio.astro";
+---
+
+<section
+  class="m-auto grid grid-cols-1 gap-9 p-3 pt-24 xl:max-w-10/12 xl:grid-cols-2"
+  id="projects"
+>
+  <h2
+    class="col-span-full mb-3 grid-cols-1 text-center text-3xl font-semibold italic sm:text-5xl"
+  >
+    Projects
+  </h2>
+
+  <div class="project-card">
+    <Portfolio />
+  </div>
+  <div class="project-card">
+    <LabRemo />
+  </div>
+
+  <div class="project-card">
+    <BorderDetection />
+  </div>
+  <div class="project-card">
+    <FixiBar />
+  </div>
+</section>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  const cards = document.querySelectorAll(".project-card");
+
+  cards.forEach((card) => {
+    gsap.set(card, { y: 30, opacity: 0 });
+
+    ScrollTrigger.create({
+      trigger: card,
+      start: "top 66%",
+
+      onEnter: () => {
+        gsap.to(card, {
+          y: 0,
+          opacity: 1,
+          duration: 0.6,
+          ease: "power3.out",
+          overwrite: true,
+        });
+      },
+
+      onLeaveBack: () => {
+        gsap.to(card, {
+          y: 30,
+          opacity: 0,
+          duration: 0.3,
+          ease: "power1.out",
+          overwrite: true,
+        });
+      },
+    });
+  });
+</script>

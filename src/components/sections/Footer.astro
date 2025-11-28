@@ -1,0 +1,128 @@
+---
+import cvFile from "@/assets/CV.pdf";
+---
+
+<footer class="bg-line py-10 dark:bg-black">
+  <div
+    class="mx-auto flex max-w-9/12 flex-col items-center justify-between gap-6 px-4 md:flex-row"
+  >
+    <div class="text-center md:text-left">
+      <a href="/#" class="text-light text-2xl font-bold tracking-wide italic">
+        Go start
+      </a>
+
+      <p class="mt-2 text-sm text-gray-400">
+        © <span id="current-year"></span> Designed & Built by Kristian Leonel.
+      </p>
+
+      <p class="mt-1 text-xs text-gray-500 dark:text-gray-600">
+        Fixi Logo by
+        <a
+          href="https://www.instagram.com/nayla.fresita?igsh=MWdsNGhwam0xbHFocw=="
+          target="_blank"
+          rel="noopener noreferrer"
+          class="underline decoration-dotted transition-colors hover:text-gray-400"
+        >
+          @nayla.fresita
+        </a>
+      </p>
+    </div>
+
+    <div class="flex gap-6">
+      
+      <span class="group relative">
+        <a
+          href={cvFile}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-light hover:text-dark-blue text-lg font-bold transition-transform duration-300 hover:scale-120 block"
+          aria-label="View my CV"
+        >
+          <svg
+            class="size-6 sm:size-8"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+            ></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+        </a>
+        <span
+          class="dark:bg-dark/50 bg-light/50 shadow-3d-light dark:shadow-3d-dark pointer-events-none absolute bottom-full left-1/2 mb-2 hidden -translate-x-1/2 scale-95 rounded-full px-3 py-1.5 text-sm font-semibold whitespace-nowrap opacity-0 backdrop-blur transition-all duration-200 group-hover:scale-100 group-hover:opacity-100 md:block"
+        >
+          View CV
+        </span>
+      </span>
+
+      <span class="group relative">
+        <a
+          href="mailto:leo.fk2731@gmail.com"
+          class="text-light hover:text-dark-blue text-lg font-bold transition-transform duration-300 hover:scale-120 block"
+          aria-label="Send me an email"
+        >
+          <svg class="size-6 sm:size-8" aria-hidden="true">
+            <use href={`#mail`}></use>
+          </svg>
+        </a>
+        <span
+          class="dark:bg-dark/50 bg-light/50 shadow-3d-light dark:shadow-3d-dark pointer-events-none absolute bottom-full left-1/2 mb-2 hidden -translate-x-1/2 scale-95 rounded-full px-3 py-1.5 text-sm font-semibold whitespace-nowrap opacity-0 backdrop-blur transition-all duration-200 group-hover:scale-100 group-hover:opacity-100 md:block"
+        >
+          Email Me
+        </span>
+      </span>
+
+      <span class="group relative">
+        <a
+          href="https://github.com/fk2731"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-light hover:text-dark-blue text-lg font-bold transition-transform duration-300 hover:scale-120 block"
+          aria-label="Check my GitHub profile"
+        >
+          <svg class="size-6 sm:size-8" aria-hidden="true">
+            <use href={`#github`}></use>
+          </svg>
+        </a>
+        <span
+          class="dark:bg-dark/50 bg-light/50 shadow-3d-light dark:shadow-3d-dark pointer-events-none absolute bottom-full left-1/2 mb-2 hidden -translate-x-1/2 scale-95 rounded-full px-3 py-1.5 text-sm font-semibold whitespace-nowrap opacity-0 backdrop-blur transition-all duration-200 group-hover:scale-100 group-hover:opacity-100 md:block"
+        >
+          GitHub
+        </span>
+      </span>
+
+      <span class="group relative">
+        <a
+          href="https://www.linkedin.com/in/kristian-leonel-ben%C3%ADtez-p%C3%A9rez-4ab628279/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="transition-transform duration-300 hover:scale-115 block"
+          aria-label="Connect on LinkedIn"
+        >
+          <svg class="size-6 sm:size-8" aria-hidden="true">
+            <use href={`#linkedin`}></use>
+          </svg>
+        </a>
+        <span
+          class="dark:bg-dark/50 bg-light/50 shadow-3d-light dark:shadow-3d-dark pointer-events-none absolute bottom-full left-1/2 mb-2 hidden -translate-x-1/2 scale-95 rounded-full px-3 py-1.5 text-sm font-semibold whitespace-nowrap opacity-0 backdrop-blur transition-all duration-200 group-hover:scale-100 group-hover:opacity-100 md:block"
+        >
+          LinkedIn
+        </span>
+      </span>
+
+    </div>
+  </div>
+</footer>
+<script>
+  const yearElement = document.getElementById("current-year");
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear().toString();
+  }
+</script>

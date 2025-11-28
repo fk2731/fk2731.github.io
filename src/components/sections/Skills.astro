@@ -1,0 +1,180 @@
+---
+import Badge from "@/components/ui/Badge.astro";
+---
+
+<section id="skills" class="mx-auto w-full max-w-5xl px-4 py-24">
+  <h2 class="mb-12 text-center text-3xl font-semibold italic sm:text-5xl">
+    Tech & Profile
+  </h2>
+
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:grid-rows-2">
+    <div
+      class="group shadow-3d-light dark:shadow-3d-dark bg-dark-brown/60 dark:bg-line/50 relative overflow-hidden rounded-3xl p-8 md:col-span-2 md:row-span-1"
+    >
+      <div
+        class="absolute -top-10 -right-10 h-32 w-32 rounded-full bg-blue-500/20 blur-xl transition-all"
+      >
+      </div>
+
+      <div class="mb-6 flex items-center gap-3">
+        <span class="text-3xl">🧠</span>
+        <h3 class="text-line dark:text-dark-brown text-2xl font-bold">
+          Core Interests
+        </h3>
+      </div>
+
+      <ul class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+        <li class="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+          <span class="mt-1 block h-2 w-2 rounded-full bg-blue-500"></span>
+          <span>OS & System Automation</span>
+        </li>
+        <li class="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+          <span class="mt-1 block h-2 w-2 rounded-full bg-purple-500"></span>
+          <span>Modern Frontend & UI/UX</span>
+        </li>
+        <li class="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+          <span class="mt-1 block h-2 w-2 rounded-full bg-green-500"></span>
+          <span>Mobile Dev (Android)</span>
+        </li>
+        <li class="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+          <span class="mt-1 block h-2 w-2 rounded-full bg-red-500"></span>
+          <span>Cybersecurity & CTFs</span>
+        </li>
+        <li class="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+          <span class="bg-dark dark:bg-light mt-1 block h-2 w-2 rounded-full"
+          ></span>
+          <span>Desktop Applications</span>
+        </li>
+        <li class="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+          <span class="mt-1 block h-2 w-2 rounded-full bg-orange-500"></span>
+          <span>Competitive Programming</span>
+        </li>
+      </ul>
+    </div>
+
+    <div
+      class="group shadow-3d-light dark:shadow-3d-dark bg-dark-brown/60 dark:bg-line/50 relative flex flex-col overflow-hidden rounded-3xl p-8 md:col-span-1 md:row-span-2"
+    >
+      <div
+        class="absolute -right-10 -bottom-10 h-32 w-32 rounded-full bg-green-500/20 blur-xl transition-all"
+      >
+      </div>
+
+      <div class="mb-6 flex items-center gap-3">
+        <span class="text-3xl">🛠️</span>
+        <h3 class="text-line dark:text-dark-brown text-2xl font-bold">
+          Toolbox
+        </h3>
+      </div>
+
+      <div class="flex-1 space-y-6">
+        <div>
+          <h4
+            class="mb-2 text-sm font-bold tracking-wider text-gray-600 uppercase dark:text-gray-400"
+          >
+            Environment
+          </h4>
+          <p class="leading-relaxed text-gray-700 dark:text-gray-200">
+            Arch Linux, Hyprland, Wayland, Neovim, Git, Bash
+          </p>
+        </div>
+
+        <div>
+          <h4
+            class="mb-2 text-sm font-bold tracking-wider text-gray-600 uppercase dark:text-gray-400"
+          >
+            Web
+          </h4>
+          <p class="leading-relaxed text-gray-700 dark:text-gray-200">
+            Astro, Tailwind, GSAP, Node.js, CSS, HTML, React
+          </p>
+        </div>
+
+        <div>
+          <h4
+            class="mb-2 text-sm font-bold tracking-wider text-gray-600 uppercase dark:text-gray-400"
+          >
+            Other
+          </h4>
+          <p class="leading-relaxed text-gray-700 dark:text-gray-200">
+            Python, Kotlin, Java, TypeScript, Django
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="group shadow-3d-light dark:shadow-3d-dark bg-dark-brown/60 dark:bg-line/50 relative overflow-hidden rounded-3xl p-8 md:col-span-1 md:row-span-1"
+    >
+      <div
+        class="absolute -bottom-10 -left-10 h-32 w-32 rounded-full bg-orange-500/20 blur-xl transition-all"
+      >
+      </div>
+
+      <div class="mb-4 flex items-center gap-3">
+        <span class="text-3xl">🤝</span>
+        <h3 class="text-line dark:text-dark-brown text-xl font-bold">
+          Soft Skills
+        </h3>
+      </div>
+
+      <div class="flex flex-wrap gap-2">
+        <Badge class="bg-light/60 dark:bg-light/10">Collaborative</Badge>
+        <Badge class="bg-light/60 dark:bg-light/10">Mentorship</Badge>
+        <Badge class="bg-light/60 dark:bg-light/10">Leadership</Badge>
+        <Badge class="bg-light/60 dark:bg-light/10">Problem-solving</Badge>
+        <Badge class="bg-light/60 dark:bg-light/10">Persistence</Badge>
+        <Badge class="bg-light/60 dark:bg-light/10">Continuous Learning</Badge>
+      </div>
+    </div>
+
+    <div
+      class="group shadow-3d-light dark:shadow-3d-dark bg-dark-brown/60 dark:bg-line/50 relative flex flex-col overflow-hidden rounded-3xl p-8 md:col-span-1 md:row-span-1"
+    >
+      <div
+        class="absolute top-0 right-0 h-20 w-20 rounded-full bg-pink-500/20 blur-xl transition-all"
+      >
+      </div>
+
+      <div class="mb-4 flex items-center gap-3">
+        <span class="text-3xl">💬</span>
+        <h3 class="text-line dark:text-dark-brown text-xl font-bold">
+          Languages
+        </h3>
+      </div>
+
+      <div class="space-y-3">
+        <div class="flex items-center justify-between">
+          <span class="font-medium text-gray-700 dark:text-gray-300"
+            >Spanish</span
+          >
+          <Badge
+            class="bg-blue-100 text-xs text-blue-600 dark:bg-blue-900/30 dark:text-blue-400"
+          >
+            Native
+          </Badge>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="font-medium text-gray-700 dark:text-gray-300"
+            >English</span
+          >
+          <Badge
+            class="bg-green-100 text-xs text-green-600 dark:bg-green-900/30 dark:text-green-400"
+          >
+            Intermediate</Badge
+          >
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="font-medium text-gray-700 dark:text-gray-300"
+            >French</span
+          >
+          <Badge
+            class="bg-yellow-100 text-xs text-yellow-600 dark:bg-yellow-900/30 dark:text-yellow-400"
+          >
+            Conversational
+          </Badge>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

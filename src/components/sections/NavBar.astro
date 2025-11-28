@@ -1,0 +1,79 @@
+---
+import ThemeToggle from "@/components/ui/ThemeSwitcher/ThemeToggle.astro";
+import Burger from "@/components/ui/BurgerButton/Burger.astro";
+import { NAV_LINKS } from "@/data/routes";
+---
+
+<section
+  id="navbar"
+  class="bg-light/30 shadow-3d-light dark:bg-dark/30 dark:shadow-3d-dark fixed top-0 left-1/2 z-50 mt-4 flex w-[95%] max-w-5xl -translate-x-1/2 items-center justify-between rounded-3xl px-6 py-4 backdrop-blur-lg transition-transform duration-300"
+>
+  <div id="right" class="flex items-center gap-4">
+    <div class="flex items-center gap-4">
+      <ThemeToggle class="text-dark dark:text-light size-7 sm:size-9" />
+    </div>
+  </div>
+  <Burger class="text-dark dark:text-light">
+    <div class="flex flex-col gap-1">
+      {
+        NAV_LINKS.map((route) => (
+          <a
+            href={route.href}
+            class="text-dark dark:text-light rounded-3xl px-4 py-2 text-lg font-medium transition-colors hover:bg-black/10 dark:hover:bg-white/10"
+          >
+            {route.name}{" "}
+          </a>
+        ))
+      }
+    </div>
+  </Burger>
+</section>
+<script>
+  let lastScrollY = window.scrollY;
+  let scrollDownAccumulator = 0;
+  const SCROLL_THRESHOLD = 150;
+  let isAutoScrolling = false;
+  let scrollTimeout;
+
+  const navbar = document.getElementById("navbar");
+
+  const anchors = document.querySelectorAll('a[href^="#"]');
+  anchors.forEach((anchor) => {
+    anchor.addEventListener("click", () => {
+      isAutoScrolling = true;
+      navbar.classList.remove("-translate-y-[200%]");
+      scrollDownAccumulator = 0;
+    });
+  });
+
+  window.addEventListener("scroll", () => {
+    if (!navbar) return;
+
+    if (isAutoScrolling) {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        isAutoScrolling = false;
+      }, 150);
+
+      lastScrollY = window.scrollY;
+      return;
+    }
+    const currentScrollY = window.scrollY;
+    const difference = currentScrollY - lastScrollY;
+
+    if (currentScrollY <= 50) {
+      navbar.classList.remove("-translate-y-[200%]");
+      scrollDownAccumulator = 0;
+    } else if (difference > 0) {
+      scrollDownAccumulator += difference;
+      if (scrollDownAccumulator > SCROLL_THRESHOLD) {
+        navbar.classList.add("-translate-y-[200%]");
+      }
+    } else if (difference < 0) {
+      navbar.classList.remove("-translate-y-[200%]");
+      scrollDownAccumulator = 0;
+    }
+
+    lastScrollY = currentScrollY;
+  });
+</script>

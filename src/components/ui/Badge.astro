@@ -1,0 +1,24 @@
+---
+interface Props {
+  class?: string;
+  icon?: string;
+}
+
+const { icon, class: className } = Astro.props;
+---
+
+<div
+  class:list={[
+    "shadow-3d-light dark:shadow-3d-dark flex cursor-default items-center gap-1.5 rounded-3xl px-2 py-1 text-sm font-semibold backdrop-blur-xs transition-colors",
+    className,
+  ]}
+>
+  <slot />
+  {
+    icon && (
+      <svg class="size-4" aria-hidden="true">
+        <use href={`#${icon}`} />
+      </svg>
+    )
+  }
+</div>

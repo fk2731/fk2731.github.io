@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-VariableFont_opsz,wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  --color-dark: #191919;
+  --color-light: #F5EDE0;
+
+  --color-light-blue: #70747A;
+  --color-dark-blue: #AFC5DC;
+
+  --color-line: #433931;
+
+  --color-light-brown: #736356;
+  --color-dark-brown: #C7B199;
+
+  /* 3d shadow*/
+  --shadow-3d-light: inset 0 1px 2px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.25);
+  --shadow-3d-dark: inset 0 1px 2px rgba(255, 255, 255, 0.15), 0 2px 4px rgba(0, 0, 0, 0.25);
+}
