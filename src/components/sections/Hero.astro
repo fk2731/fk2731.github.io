@@ -1,3 +1,10 @@
+---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <style>
   .typewriter-effect {
     border-right: 3px solid #06b6d4;
@@ -57,10 +64,10 @@
       <p
         class="text-xl font-medium text-gray-700 md:text-2xl dark:text-gray-300"
       >
-        Computer Science student at
+        {t('hero.student')}
         <span class="group relative cursor-help font-semibold">
           <abbr
-            aria-label="Universidad Nacional Autónoma de México"
+            aria-label={t('hero.unam.full')}
             class="no-underline decoration-dotted underline-offset-4 transition-colors hover:text-cyan-500"
           >
             UNAM
@@ -69,7 +76,7 @@
           <span
             class="dark:bg-dark/50 bg-light/50 shadow-3d-light dark:shadow-3d-dark pointer-events-none absolute top-full left-1/2 mt-2 hidden -translate-x-1/2 scale-95 rounded-full px-3 py-1.5 text-base whitespace-nowrap opacity-0 backdrop-blur transition-all duration-200 group-hover:scale-100 group-hover:opacity-100 md:block"
           >
-            Universidad Nacional Autónoma de México
+            {t('hero.unam.full')}
           </span>
         </span>
       </p>
@@ -77,13 +84,10 @@
       <p
         class="text-light-blue dark:text-dark-blue mx-auto max-w-2xl text-base leading-relaxed text-pretty md:text-xl"
       >
-        Just a CS student exploring <span class="font-bold"
-          >Operating Systems</span
-        > and
-        <span class="font-bold">Web Development</span>. I'm always looking to
-        leverage new technologies to build optimized, user-centric software
-        solutions — guided by the idea that knowledge becomes more valuable when
-        it’s shared.
+        {t('hero.desc.p1')} <span class="font-bold"
+          >{t('hero.desc.os')}</span
+        > {t('hero.desc.and')}
+        <span class="font-bold">{t('hero.desc.web')}</span>. {t('hero.desc.p2')}
       </p>
     </div>
   </section>
@@ -107,7 +111,7 @@
   const charCount = 15;
 
   document.addEventListener("DOMContentLoaded", () => {
-    const tl = gsap.timeline({ delay: 0.3 });
+    const tl = gsap.timeline({ delay: 0.2 });
 
     tl.to("#typewriter-text", {
       width: charCount + "ch",

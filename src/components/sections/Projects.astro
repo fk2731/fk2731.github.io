@@ -3,6 +3,11 @@ import FixiBar from "@/components/projects/FixiBar.astro";
 import BorderDetection from "@/components/projects/BorderDetection.astro";
 import LabRemo from "@/components/projects/LabRemo.astro";
 import Portfolio from "@/components/projects/Portfolio.astro";
+
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section
@@ -12,7 +17,7 @@ import Portfolio from "@/components/projects/Portfolio.astro";
   <h2
     class="col-span-full mb-3 grid-cols-1 text-center text-3xl font-semibold italic sm:text-5xl"
   >
-    Projects
+    {t('projects.title')}
   </h2>
 
   <div class="project-card">
@@ -42,7 +47,7 @@ import Portfolio from "@/components/projects/Portfolio.astro";
 
     ScrollTrigger.create({
       trigger: card,
-      start: "top 66%",
+      start: "top 73%",
 
       onEnter: () => {
         gsap.to(card, {

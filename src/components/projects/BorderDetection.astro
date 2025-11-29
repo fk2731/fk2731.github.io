@@ -3,40 +3,25 @@ import ProjectCard from "@/components/ui/ProjectCard.astro";
 import image from "@/assets/examples/image3.png";
 import processedImage from "@/assets/examples/image3-sobel-operator.png";
 import { Image } from "astro:assets";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <ProjectCard
-  title="Border Detection"
-  subtitle="Java software for detecting borders in images"
+  title={t("proj.border.title")}
+  subtitle={t("proj.border.subtitle")}
   icon="java"
   iconClass="bg-orange-400/10"
 >
   <div class="prose dark:prose-invert max-w-none leading-relaxed">
-    <p>
-      A software developed in <strong>Java</strong> for digital image processing
-      using the Sobel Operator and concurrency.
-    </p>
+    <p set:html={t("proj.border.desc")} />
+
     <ul class="mt-2 list-none space-y-2 pl-0 text-gray-600 dark:text-gray-300">
       <li class="flex gap-2">
         <span class="font-bold text-sky-500">›</span>
-        <span
-          >Implemented the <strong>Sobel Operator</strong> to detect edges.</span
-        >
-      </li>
-      <li class="flex gap-2">
-        <span class="font-bold text-sky-500">›</span>
-        <span
-          >Utilizes parallel processing with <strong>Java Threads</strong
-          >.</span
-        >
-      </li>
-      <li class="flex gap-2">
-        <span class="font-bold text-sky-500">›</span>
-        <span
-          >Designed with <strong>MVC Architecture</strong> and <strong
-            >Design Patterns</strong
-          > for modularity.</span
-        >
+        <span set:html={t("proj.border.li3")} />
       </li>
     </ul>
   </div>
@@ -49,7 +34,7 @@ import { Image } from "astro:assets";
     >
       <Image
         src={image}
-        alt="Original example"
+        alt={t("proj.border.altOriginal")}
         class="h-32 w-auto object-cover"
       />
     </div>
@@ -67,7 +52,7 @@ import { Image } from "astro:assets";
     >
       <Image
         src={processedImage}
-        alt="Sobel operator result"
+        alt={t("proj.border.altResult")}
         class="h-32 w-auto object-cover"
       />
     </div>

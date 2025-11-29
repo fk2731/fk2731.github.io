@@ -1,5 +1,9 @@
 ---
 import ProjectCard from "@/components/ui/ProjectCard.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const fixiBarTechs = {
   Python:
@@ -13,45 +17,33 @@ const fixiBarTechs = {
 
 <ProjectCard
   title="FixiBar"
-  subtitle="Fully Riced Hyprland"
+  subtitle={t("fixibar.subtitle")}
   icon="hyprland"
   iconClass="bg-sky-500/10 text-sky-600"
   technologies={fixiBarTechs}
   githubUrl="https://github.com/fk2731/FixiBar"
 >
-  <p>
-    A highly custom config for <strong>Hyprland</strong> compositor. This project
-    bridges the gap between visual aesthetics and low-level system monitoring, among
-    other utilities.
-  </p>
+  <p set:html={t("fixibar.desc")} />
+
   <ul class="mt-2 list-none space-y-2 pl-0 text-gray-600 dark:text-gray-300">
     <li class="flex gap-2">
       <span class="font-bold text-sky-500">›</span>
-      <span
-        >Implemented <strong>asynchronous polling</strong> mechanisms in Python to
-        prevent I/O blocking.</span
-      >
+      <span set:html={t("fixibar.li1")} />
     </li>
+
     <li class="flex gap-2">
       <span class="font-bold text-sky-500">›</span>
-      <span
-        >Developed custom software for the <strong>automation</strong> of system
-        tasks.</span
-      >
+      <span set:html={t("fixibar.li2")} />
     </li>
+
     <li class="flex gap-2">
       <span class="font-bold text-sky-500">›</span>
-      <span
-        >Designed a <strong>modular architecture</strong> to facilitate easy addition
-        of widgets.</span
-      >
+      <span set:html={t("fixibar.li3")} />
     </li>
+
     <li class="flex gap-2">
       <span class="font-bold text-sky-500">›</span>
-      <span
-        >Leveraged <strong>GTK</strong> for creating custom widgets prioritizing
-        UI/UX.</span
-      >
+      <span set:html={t("fixibar.li4")} />
     </li>
   </ul>
 </ProjectCard>

@@ -1,7 +1,22 @@
 ---
 import ThemeToggle from "@/components/ui/ThemeSwitcher/ThemeToggle.astro";
 import Burger from "@/components/ui/BurgerButton/Burger.astro";
-import { NAV_LINKS } from "@/data/routes";
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "@/i18n/utils";
+import { languages } from "@/i18n/ui";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
+const navLinks = [
+  { name: t("nav.projects"), href: "#projects" },
+  { name: t("nav.education"), href: "#education" },
+  { name: t("nav.skills"), href: "#skills" },
+];
 ---
 
 <section
@@ -11,14 +26,45 @@ import { NAV_LINKS } from "@/data/routes";
   <div id="right" class="flex items-center gap-4">
     <div class="flex items-center gap-4">
       <ThemeToggle class="text-dark dark:text-light size-7 sm:size-9" />
+      <Burger
+        class="text-dark dark:text-light"
+        id="lang-burger"
+        dataPosition="left"
+        type="languages"
+      >
+        <div class="flex flex-col gap-1">
+          <span class="px-4 py-2 text-xs font-bold text-gray-500 uppercase">
+            {t("nav.languages")}
+          </span>
+          {
+            Object.entries(languages).map(([langKey, label]) => {
+              const isCurrent = lang === langKey;
+
+              return (
+                <a
+                  href={!isCurrent ? translatePath("/", langKey) : null}
+                  class={`text-dark dark:text-light rounded-3xl px-4 py-2 text-lg font-medium transition-colors hover:bg-black/10 dark:hover:bg-white/10 ${
+                    isCurrent
+                      ? "pointer-events-none cursor-default bg-black/5 font-bold dark:bg-white/5"
+                      : ""
+                  }`}
+                  aria-disabled={isCurrent}
+                >
+                  {label}
+                </a>
+              );
+            })
+          }
+        </div>
+      </Burger>
     </div>
   </div>
   <Burger class="text-dark dark:text-light">
     <div class="flex flex-col gap-1">
       {
-        NAV_LINKS.map((route) => (
+        navLinks.map((route) => (
           <a
-            href={route.href}
+            href={translatePath(route.href)}
             class="text-dark dark:text-light rounded-3xl px-4 py-2 text-lg font-medium transition-colors hover:bg-black/10 dark:hover:bg-white/10"
           >
             {route.name}{" "}

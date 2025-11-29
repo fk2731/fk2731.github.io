@@ -1,5 +1,9 @@
 ---
 import ProjectCard from "@/components/ui/ProjectCard.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const labRemoTechs = {
   JavaScript:
@@ -14,8 +18,8 @@ const labRemoTechs = {
 ---
 
 <ProjectCard
-  title="Laboratorio Remoto"
-  subtitle="Web Application for Remote Lab Management"
+  title={t("proj.labremo.title")}
+  subtitle={t("proj.labremo.subtitle")}
   icon="labRemo"
   iconClass="bg-green-300/30"
   technologies={labRemoTechs}
@@ -27,33 +31,26 @@ const labRemoTechs = {
       >
         <span class="relative flex h-2 w-2">
           <span
-            class="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75"
+            class="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-600 opacity-75"
           ></span>
           <span class="relative inline-flex h-2 w-2 rounded-full bg-amber-500"
           ></span>
         </span>
-        Work in Progress
+        {t("proj.labremo.wip")}
       </span>
     </div>
 
-    <p>
-      <strong>Currently being developed</strong> for the <strong>IIMAS</strong> institute
-      as a comprehensive web application to facilitate remote access for programming
-      and experimentation with programmable circuits.
-    </p>
+    <p set:html={t("proj.labremo.desc")} />
+
     <ul class="mt-2 list-none space-y-2 pl-0 text-gray-600 dark:text-gray-300">
       <li class="flex gap-2">
         <span class="font-bold text-sky-500">›</span>
-        <span
-          >Worked with UI/UX designers to develop a <strong>React</strong> application.</span
-        >
+        <span set:html={t("proj.labremo.li1")} />
       </li>
+
       <li class="flex gap-2">
         <span class="font-bold text-sky-500">›</span>
-        <span
-          >Collaborated with the backend team using <strong>Django</strong> to develop
-          RESTful APIs.</span
-        >
+        <span set:html={t("proj.labremo.li2")} />
       </li>
     </ul>
   </div>
