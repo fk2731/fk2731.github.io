@@ -12,6 +12,7 @@ export const ui = {
     'nav.projects': 'Proyectos',
     'nav.skills': 'Habilidades',
     'nav.education': 'Educación',
+    'nav.contact': 'Contact',
 
     // ### HERO ###
     'hero.student': 'Estudiante de Ciencias de la Computación en',
