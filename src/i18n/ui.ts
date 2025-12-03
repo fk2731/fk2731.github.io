@@ -12,7 +12,7 @@ export const ui = {
     'nav.projects': 'Proyectos',
     'nav.skills': 'Habilidades',
     'nav.education': 'Educación',
-    'nav.contact': 'Contact',
+    'nav.contact': 'Contacto',
 
     // ### HERO ###
     'hero.student': 'Estudiante de Ciencias de la Computación en',
@@ -22,54 +22,54 @@ export const ui = {
     'hero.desc.and': 'y',
     'hero.desc.web': 'el desarrollo web',
     'hero.desc.p2':
-      'Busco usar las tecnologías para construir soluciones de software optimizadas y mantenibles',
+      'Enfocado en construir soluciones de software optimizadas, escalables y de código limpio.',
 
     // ### PROJECTS ###
     'projects.title': 'Proyectos',
 
     // FIXIBAR PROJECT
-    'fixibar.subtitle': 'Hyprland Personalizado',
+    'fixibar.subtitle': 'Entorno Hyprland Personalizado',
     'fixibar.desc':
-      'Configuración altamente personalizada para el compositor <strong>Hyprland</strong> inspirada en mi gato “Fixi”. Esta configuración prioriza el monitoreo de bajo nivel, la estética, funcionalidad y la productividad.',
+      'Entorno de escritorio altamente configurado para <strong>Hyprland</strong> (inspirado en mi gato “Fixi”). Prioriza el monitoreo de bajo nivel, la estética minimalista y la productividad.',
     'fixibar.li1':
-      'Implementé mecanismos de <strong>sondeo asíncrono</strong> en Python para evitar bloqueos de I/O.',
+      'Implementé <strong>sondeo asíncrono</strong> en Python para la actualización de widgets sin bloqueos de I/O.',
     'fixibar.li2':
-      'Desarrollé software personalizado para la <strong>automatización</strong> de tareas del sistema.',
+      'Desarrollé scripts personalizados para la <strong>automatización</strong> integral del sistema.',
     'fixibar.li3':
-      'Diseñé una <strong>arquitectura modular</strong> para facilitar la adición de widgets a mi propia barra de estado.',
+      'Diseñé una <strong>arquitectura modular</strong> que permite extender la barra de estado fácilmente.',
     'fixibar.li4':
-      'Usé <strong>GTK</strong> para desarrollar aplicaciones y widgets de escritorio personalizados en Linux.',
+      'Creé widgets y herramientas de escritorio nativas utilizando <strong>GTK</strong>.',
 
     // BORDER DETECTION PROJECT
     'proj.border.title': 'Detección de Bordes',
-    'proj.border.subtitle': 'Software en Java para detección de bordes en imágenes',
+    'proj.border.subtitle': 'Procesamiento de imágenes con Java',
     'proj.border.desc':
-      'Software desarrollado en <strong>Java</strong> para procesamiento digital de imágenes utilizando el Operador Sobel y concurrencia.',
+      'Sistema de procesamiento digital de imágenes desarrollado en <strong>Java</strong>, enfocado en el rendimiento mediante concurrencia y el Operador Sobel.',
     'proj.border.li3':
-      'Diseñado con <strong>arquitectura MVC</strong> y <strong>patrones de diseño</strong> para mayor modularidad.',
-    'proj.border.altOriginal': 'Ejemplo original',
-    'proj.border.altResult': 'Resultado del operador Sobel',
+      'Estructurado bajo el patrón <strong>MVC</strong> para garantizar la separación de responsabilidades y modularidad.',
+    'proj.border.altOriginal': 'Imagen original',
+    'proj.border.altResult': 'Resultado filtro Sobel',
 
     // LABREMO PROJECT
     'proj.labremo.title': 'Laboratorio Remoto',
-    'proj.labremo.subtitle': 'Aplicación web para gestión de laboratorios remotos',
+    'proj.labremo.subtitle': 'Plataforma web de gestión académica',
     'proj.labremo.wip': 'En desarrollo',
     'proj.labremo.desc':
-      'Participé en el desarrollo de una aplicación web integral que facilita el acceso remoto para programación, simulación y experimentación de circuitos programables para el instituto <strong>IIMAS</strong>,',
+      'Colaboración en el desarrollo de una plataforma integral para el <strong>IIMAS</strong>, permitiendo la programación y simulación remota de circuitos.',
     'proj.labremo.li1':
-      'Trabajé con diseñadores UI/UX para desarrollar una aplicación en <strong>React</strong>.',
+      'Desarrollo del frontend en <strong>React</strong> en colaboración con el equipo de diseño UI/UX.',
     'proj.labremo.li2':
-      'Colaboré con el equipo de backend usando <strong>Django</strong> para crear APIs RESTful.',
+      'Implementación de APIs RESTful robustas utilizando <strong>Django</strong> en el backend.',
 
     // PORTFOLIO PROJECT
     'proj.portfolio.title': 'Portafolio Web',
-    'proj.portfolio.subtitle': 'Mi portafolio personal',
+    'proj.portfolio.subtitle': 'Identidad digital y proyectos',
     'proj.portfolio.desc':
-      'Desarrollé un sitio web personal <strong>ligero</strong> y de <strong>alto rendimiento</strong> desde cero utilizando la arquitectura de islas de <strong>Astro</strong>.',
+      'Sitio personal de <strong>alto rendimiento</strong> construido sobre la arquitectura de islas de <strong>Astro</strong>.',
     'proj.portfolio.li1':
-      'Aproveché la <strong>generación de sitios estáticos (SSG)</strong> para entregar HTML prerenderizado, asegurando una huella mínima y <strong>tiempos de carga casi instantáneos</strong>.',
+      'Implementé <strong>Generación de Sitios Estáticos (SSG)</strong> para garantizar tiempos de carga casi instantáneos y máxima optimización SEO.',
     'proj.portfolio.li2':
-      'Construí componentes reutilizables con <strong>TypeScript</strong> y <strong>Tailwind</strong> para garantizar consistencia, mantenibilidad y extensionabilidad.',
+      'Construí una librería de componentes reutilizables con <strong>TypeScript</strong> y <strong>Tailwind</strong> para asegurar mantenibilidad y consistencia visual.',
 
     // ### EDUCATION ###
     'edu.title': 'Educación',
@@ -83,42 +83,42 @@ export const ui = {
     'edu.hfc.role': 'Miembro de',
     'edu.hfc.time': '2025 - presente',
     'edu.hfc.desc':
-      'Miembro activo de una comunidad de hacking ético enfocada en investigación de ciberseguridad, CTFs y prácticas de divulgación responsable.',
+      'Participante activo en comunidad de hacking ético. Investigación en ciberseguridad y divulgación responsable.',
 
     // android
     'edu.android.title': 'Introducción al Desarrollo Android',
     'edu.android.desc':
-      'Curso enfocado en aprender las bases del desarrollo Android usando Kotlin y Android Studio.',
+      'Formación técnica en los fundamentos de desarrollo móvil nativo con Kotlin y Android Studio.',
     'edu.cert.verify': 'Verificación de certificado:',
-    'edu.cert.link': 'Ir al validador',
-    'edu.cert.entity': 'Entidad:',
+    'edu.cert.link': 'Validar credencial',
+    'edu.cert.entity': 'Emisor:',
     'edu.cert.folio': 'Folio:',
 
     // technician
     'edu.tech.degree': 'Técnico Especialista en Computación — Titulado',
 
     // ### SKILLS ###
-    'skills.title': 'Tecnologías y perfil',
-    'skills.core': 'Intereses principales',
-    'skills.core.os': 'Sistemas operativos y automatización',
-    'skills.core.frontend': 'Frontend moderno y UI/UX',
-    'skills.core.mobile': 'Desarrollo móvil (Android)',
-    'skills.core.cyber': 'Ciberseguridad y CTFs',
-    'skills.core.desktop': 'Aplicaciones de escritorio',
-    'skills.core.cp': 'Programación competitiva',
+    'skills.title': 'Perfil Tecnológico',
+    'skills.core': 'Áreas de Interés',
+    'skills.core.os': 'Sistemas Operativos y Automatización',
+    'skills.core.frontend': 'Frontend Moderno y UI/UX',
+    'skills.core.mobile': 'Desarrollo Móvil (Android)',
+    'skills.core.cyber': 'Ciberseguridad',
+    'skills.core.desktop': 'Aplicaciones de Escritorio',
+    'skills.core.cp': 'Programación Competitiva',
 
     'skills.tools': 'Herramientas',
     'skills.tools.env': 'Entorno',
     'skills.tools.web': 'Web',
     'skills.tools.other': 'Otros',
 
-    'skills.soft': 'Habilidades blandas',
-    'skills.soft.collab': 'Colaboración',
+    'skills.soft': 'Habilidades Blandas',
+    'skills.soft.collab': 'Trabajo en equipo',
     'skills.soft.mentor': 'Mentoría',
     'skills.soft.lead': 'Liderazgo',
     'skills.soft.problem': 'Resolución de problemas',
     'skills.soft.persist': 'Persistencia',
-    'skills.soft.learning': 'Aprendizaje continuo',
+    'skills.soft.learning': 'Aprendizaje Autodidacta',
 
     'skills.lang': 'Idiomas',
     'skills.lang.es': 'Español',
@@ -130,12 +130,13 @@ export const ui = {
 
     // ### FOOTER ###
     'footer.goStart': 'Volver al inicio',
-    'footer.designed': 'Diseñado y hecho por',
-    'footer.quote': 'Si he visto más lejos es porque estoy sobre los hombros de gigantes.',
+    'footer.designed': 'Diseñado y desarrollado por',
+    'footer.quote':
+      'Si he visto más lejos es porque estoy sobre los hombros de gigantes.',
     'footer.cite': 'Carta a Robert Hooke',
-    'footer.logo': 'Logo de FixiArch gracias a',
+    'footer.logo': 'Logo de FixiArch cortesía de',
     'footer.cv': 'Ver CV',
-    'footer.email': 'Envíame un correo',
+    'footer.email': 'Contactar por correo',
     'footer.github': 'GitHub',
     'footer.linkedin': 'LinkedIn',
   },
@@ -150,65 +151,68 @@ export const ui = {
     'nav.projects': 'Projects',
     'nav.skills': 'Skills',
     'nav.education': 'Education',
+    'nav.contact': 'Contact',
 
     // ### HERO ###
     'hero.student': 'Computer Science Student at',
     'hero.unam.full': 'National Autonomous University of Mexico',
-    'hero.desc.p1': 'A computer science student interested in',
+    'hero.desc.p1': 'Computer Science student passionate about',
     'hero.desc.os': 'operating systems',
     'hero.desc.and': 'and',
     'hero.desc.web': 'web development',
     'hero.desc.p2':
-      'I aim to leverage technology to build optimized and maintainable software solutions',
+      'Focused on building optimized, maintainable, and scalable software solutions.',
 
     // ### PROJECTS ###
     'projects.title': 'Projects',
 
     // FIXIBAR
-    'fixibar.subtitle': 'Fully Riced Hyprland',
+    'fixibar.subtitle': 'Custom Hyprland Environment',
     'fixibar.desc':
-      'A highly customized configuration for the <strong>Hyprland</strong> compositor, inspired by my cat “Fixi”. This setup prioritizes low-level system monitoring, aesthetics, functionality, and productivity.',
+      'A highly customized desktop environment for <strong>Hyprland</strong>, inspired by my cat “Fixi”. Prioritizes low-level monitoring, minimalist aesthetics, and productivity.',
     'fixibar.li1':
-      'Implemented <strong>asynchronous polling</strong> mechanisms in Python to prevent I/O blocking.',
+      'Implemented <strong>asynchronous polling</strong> in Python to prevent I/O blocking during widget updates.',
     'fixibar.li2':
-      'Developed custom software for <strong>system task automation</strong>.',
+      'Developed custom scripts for comprehensive <strong>system automation</strong>.',
     'fixibar.li3':
-      'Designed a <strong>modular architecture</strong> to simplify the addition of custom status bar widgets.',
+      'Designed a <strong>modular architecture</strong> to easily extend status bar functionality.',
     'fixibar.li4':
-      'Utilized <strong>GTK</strong> to create custom desktop applications and widgets with a focus on UI/UX.',
+      'Created custom desktop widgets and tools using <strong>GTK</strong>.',
 
     // BORDER DETECTION
-    'proj.border.title': 'Edge Detection', // "Edge detection" es más común que "Border" en Computer Vision
-    'proj.border.subtitle': 'Java software for image edge detection',
+    'proj.border.title': 'Edge Detection',
+    'proj.border.subtitle': 'Java Image Processing',
     'proj.border.desc':
-      'Software developed in <strong>Java</strong> for digital image processing utilizing concurrency and the Sobel Operator.',
-    'proj.border.li1': 'Implemented the <strong>Sobel Operator</strong> for edge detection.', // Ojo: Esta llave no estaba en tu español, la dejé por consistencia si la usas
-    'proj.border.li2': 'Uses parallel processing with <strong>Java Threads</strong>.', // Igual aquí
+      'Digital image processing software built with <strong>Java</strong>, utilizing the Sobel Operator and multi-threading for performance.',
+    'proj.border.li1':
+      'Implemented the <strong>Sobel Operator</strong> algorithm for precise edge detection.',
+    'proj.border.li2':
+      'Utilized <strong>Java Threads</strong> to optimize processing speed via parallelism.',
     'proj.border.li3':
-      'Designed using <strong>MVC architecture</strong> and <strong>design patterns</strong> to ensure modularity.',
+      'Structured with <strong>MVC architecture</strong> to ensure code modularity and separation of concerns.',
     'proj.border.altOriginal': 'Original sample',
-    'proj.border.altResult': 'Sobel operator result',
+    'proj.border.altResult': 'Sobel result',
 
     // LABREMO
     'proj.labremo.title': 'Remote Laboratory',
-    'proj.labremo.subtitle': 'Web application for remote lab management',
+    'proj.labremo.subtitle': 'Lab Management Platform',
     'proj.labremo.wip': 'In Development',
     'proj.labremo.desc':
-      'Contributed to the development of a comprehensive web platform for the <strong>IIMAS</strong> institute, facilitating remote access for programming, simulation, and experimentation with programmable circuits.',
+      'Contributing to a web platform for <strong>IIMAS</strong>, enabling remote access for programming and simulating programmable circuits.',
     'proj.labremo.li1':
-      'Collaborated with UI/UX designers to build the frontend in <strong>React</strong>.',
+      'Developing the frontend interface using <strong>React</strong> in collaboration with UI/UX designers.',
     'proj.labremo.li2':
-      'Worked with the backend team using <strong>Django</strong> to develop RESTful APIs.',
+      'Building robust RESTful APIs with the backend team using <strong>Django</strong>.',
 
     // PORTFOLIO
     'proj.portfolio.title': 'Portfolio Website',
-    'proj.portfolio.subtitle': 'My personal portfolio',
+    'proj.portfolio.subtitle': 'Personal Web Identity',
     'proj.portfolio.desc':
-      'Developed a <strong>lightweight</strong> and <strong>high-performance</strong> personal website from scratch using <strong>Astro</strong>’s island architecture.',
+      'A <strong>high-performance</strong> personal website built from scratch using <strong>Astro</strong>’s island architecture.',
     'proj.portfolio.li1':
-      'Leveraged <strong>Static Site Generation (SSG)</strong> to deliver pre-rendered HTML, ensuring a minimal footprint and <strong>near-instant load times</strong>.',
+      'Implemented <strong>Static Site Generation (SSG)</strong> to deliver pre-rendered HTML, ensuring near-instant load times.',
     'proj.portfolio.li2':
-      'Built reusable components with <strong>TypeScript</strong> and <strong>Tailwind</strong> to guarantee consistency, maintainability, and extensibility.',
+      'Built a library of reusable components with <strong>TypeScript</strong> and <strong>Tailwind</strong> for maintainability and consistency.',
 
     // ### EDUCATION ###
     'edu.title': 'Education',
@@ -217,16 +221,16 @@ export const ui = {
     'edu.bs.status': 'In progress',
 
     'edu.hfc.title': 'Fourth HFC Generation',
-    'edu.hfc.role': 'Member of the',
+    'edu.hfc.role': 'Member of',
     'edu.hfc.time': '2025 – Present',
     'edu.hfc.desc':
-      'Active member of an ethical hacking community focused on cybersecurity research, CTFs, and responsible disclosure practices.',
+      'Active member of an ethical hacking community. Focused on cybersecurity research, and responsible disclosure.',
 
     'edu.android.title': 'Introduction to Android Development',
     'edu.android.desc':
-      'Course focused on the fundamentals of Android development using Kotlin and Android Studio.',
+      'Technical course covering the fundamentals of native Android development with Kotlin and Android Studio.',
     'edu.cert.verify': 'Certificate verification:',
-    'edu.cert.link': 'Validate certificate',
+    'edu.cert.link': 'Validate credential',
     'edu.cert.entity': 'Issued by:',
     'edu.cert.folio': 'ID/Folio:',
 
@@ -238,7 +242,7 @@ export const ui = {
     'skills.core.os': 'Operating Systems & Automation',
     'skills.core.frontend': 'Modern Frontend & UI/UX',
     'skills.core.mobile': 'Mobile Development (Android)',
-    'skills.core.cyber': 'Cybersecurity & CTFs',
+    'skills.core.cyber': 'Cybersecurity',
     'skills.core.desktop': 'Desktop Applications',
     'skills.core.cp': 'Competitive Programming',
 
@@ -248,12 +252,12 @@ export const ui = {
     'skills.tools.other': 'Other',
 
     'skills.soft': 'Soft Skills',
-    'skills.soft.collab': 'Collaboration',
+    'skills.soft.collab': 'Teamwork',
     'skills.soft.mentor': 'Mentorship',
     'skills.soft.lead': 'Leadership',
     'skills.soft.problem': 'Problem-solving',
-    'skills.soft.persist': 'Perseverance',
-    'skills.soft.learning': 'Continuous Learning',
+    'skills.soft.persist': 'Persistence',
+    'skills.soft.learning': 'Self-taught Learner',
 
     'skills.lang': 'Languages',
     'skills.lang.es': 'Spanish',
@@ -266,9 +270,10 @@ export const ui = {
     // ### FOOTER ###
     'footer.goStart': 'Back to top',
     'footer.designed': 'Designed & built by',
-    'footer.quote': 'If I have seen further it is by standing on the shoulders of Giants.',
+    'footer.quote':
+      'If I have seen further it is by standing on the shoulders of Giants.',
     'footer.cite': 'Letter to Robert Hooke',
-    'footer.logo': 'FixiArch logo thanks to',
+    'footer.logo': 'FixiArch logo courtesy of',
     'footer.cv': 'View CV',
     'footer.email': 'Email me',
     'footer.github': 'GitHub',
