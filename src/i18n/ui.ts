@@ -69,7 +69,7 @@ export const ui = {
     'proj.portfolio.li1':
       'Implementé <strong>Generación de Sitios Estáticos (SSG)</strong> para garantizar tiempos de carga casi instantáneos y máxima optimización SEO.',
     'proj.portfolio.li2':
-      'Construí una librería de componentes reutilizables con <strong>TypeScript</strong> y <strong>Tailwind</strong> para asegurar mantenibilidad y consistencia visual.',
+      'Construí un conjunto de componentes reutilizables con <strong>TypeScript</strong> y <strong>Tailwind</strong> para asegurar mantenibilidad y consistencia visual.',
 
     // ### EDUCATION ###
     'edu.title': 'Educación',
