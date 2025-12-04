@@ -20,7 +20,7 @@ export const ui = {
     'hero.desc.p1': 'Estudiante de ciencias de la computación interesado en los',
     'hero.desc.os': 'Sistemas Operativos',
     'hero.desc.and': 'y',
-    'hero.desc.web': 'el desarrollo web',
+    'hero.desc.web': 'el desarrollo de aplicaciones',
     'hero.desc.p2':
       'Enfocado en construir soluciones de software optimizadas, escalables y de código limpio.',
 
@@ -30,7 +30,7 @@ export const ui = {
     // FIXIBAR PROJECT
     'fixibar.subtitle': 'Entorno Hyprland Personalizado',
     'fixibar.desc':
-      'Entorno de escritorio altamente configurado para <strong>Hyprland</strong> (inspirado en mi gato “Fixi”). Prioriza el monitoreo de bajo nivel, la estética minimalista y la productividad.',
+      'Entorno altamente configurado para <strong>Hyprland</strong> (inspirado en mi gato “Fixi”). Prioriza el monitoreo de bajo nivel, la estética minimalista y la productividad.',
     'fixibar.li1':
       'Implementé <strong>sondeo asíncrono</strong> en Python para la actualización de widgets sin bloqueos de I/O.',
     'fixibar.li2':
@@ -118,7 +118,7 @@ export const ui = {
     'skills.soft.lead': 'Liderazgo',
     'skills.soft.problem': 'Resolución de problemas',
     'skills.soft.persist': 'Persistencia',
-    'skills.soft.learning': 'Aprendizaje Autodidacta',
+    'skills.soft.learning': 'Autodidacta',
 
     'skills.lang': 'Idiomas',
     'skills.lang.es': 'Español',
@@ -159,7 +159,7 @@ export const ui = {
     'hero.desc.p1': 'Computer Science student passionate about',
     'hero.desc.os': 'operating systems',
     'hero.desc.and': 'and',
-    'hero.desc.web': 'web development',
+    'hero.desc.web': 'applications development',
     'hero.desc.p2':
       'Focused on building optimized, maintainable, and scalable software solutions.',
 
@@ -169,7 +169,7 @@ export const ui = {
     // FIXIBAR
     'fixibar.subtitle': 'Custom Hyprland Environment',
     'fixibar.desc':
-      'A highly customized desktop environment for <strong>Hyprland</strong>, inspired by my cat “Fixi”. Prioritizes low-level monitoring, minimalist aesthetics, and productivity.',
+      'A highly customized environment for <strong>Hyprland</strong>, inspired by my cat “Fixi”. Prioritizes low-level monitoring, minimalist aesthetics, and productivity.',
     'fixibar.li1':
       'Implemented <strong>asynchronous polling</strong> in Python to prevent I/O blocking during widget updates.',
     'fixibar.li2':
